@@ -101,9 +101,9 @@ Install maui-software-ui using one of the following methods:
 
 1. Download the app acccording to your operational system
 
-**Linux** - 
-**Windows** - ![WIP](https://img.shields.io/badge/status-WIP-yellow)
-**MacOS** - ![WIP](https://img.shields.io/badge/status-WIP-yellow)
+- **Linux** - ![WIP](https://img.shields.io/badge/status-WIP-yellow)
+- **Windows** - ![WIP](https://img.shields.io/badge/status-WIP-yellow)
+- **MacOS** - ![WIP](https://img.shields.io/badge/status-WIP-yellow)
 
 
 ---
