@@ -1,0 +1,49 @@
+# utils/__init__.py - Imports explícitos para PyInstaller
+
+# Import dos módulos da pasta utils com tratamento de erros
+import sys
+import os
+
+# Se executando como executável PyInstaller
+if getattr(sys, 'frozen', False):
+    # Adicionar caminho do utils ao sys.path
+    utils_path = os.path.join(sys._MEIPASS, 'utils')
+    if utils_path not in sys.path:
+        sys.path.insert(0, utils_path)
+
+# Importar módulos individualmente com fallback
+try:
+    from . import io_utils
+except ImportError:
+    try:
+        import io_utils
+    except ImportError:
+        print("⚠️ Aviso: io_utils não pôde ser importado")
+        io_utils = None
+
+try:
+    from . import definitions
+except ImportError:
+    try:
+        import definitions
+    except ImportError:
+        print("⚠️ Aviso: definitions não pôde ser importado")
+        definitions = None
+
+try:
+    from . import utils as utils_module
+except ImportError:
+    try:
+        import utils as utils_module
+    except ImportError:
+        print("⚠️ Aviso: utils.py não pôde ser importado")
+        utils_module = None
+
+# Tornar módulos disponíveis no namespace
+__all__ = []
+if io_utils is not None:
+    __all__.append('io_utils')
+if definitions is not None:
+    __all__.append('definitions')
+if utils_module is not None:
+    __all__.append('utils_module')

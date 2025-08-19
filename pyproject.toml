@@ -1,0 +1,28 @@
+[tool.poetry]
+name = "maui-audio-data-loader"
+version = "1.0.0"
+description = "MAUI Audio Data Loader - Interface para análise de dados de áudio"
+authors = ["MAUI Team"]
+readme = "README.md"
+package-mode = false
+
+[tool.poetry.dependencies]
+python = ">=3.9,<3.13"
+maui-software = "^0.2.6"
+dash = "^3.1.0"
+dash-mantine-components = "^2.0.0"
+dash-iconify = "^0.1.1"
+
+[tool.poetry.group.build.dependencies]
+pyinstaller = "^6.0.0"
+jaraco-text = "^3.12.0"
+setuptools = "^69.0.0"
+wheel = "^0.42.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+maui-loader = "app:main"
+
