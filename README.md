@@ -76,25 +76,25 @@ Install maui-software-ui using one of the following methods:
 
 1. Clone the maui-software-ui repository:
 ```sh
-❯ git clone https://github.com/maui-software/maui-software-ui
+git clone https://github.com/maui-software/maui-software-ui
 ```
 
 2. Navigate to the project directory:
 ```sh
-❯ cd maui-software-ui
+cd maui-software-ui
 ```
 
 3. Install the project dependencies:
 
 ```sh
-❯ poetry install
+poetry install
 ```
 
 4. Run maui-software-ui using the following command:
 
 
 ```sh
-❯ poetry run python app.py
+poetry run python app.py
 ```
 
 #### **Download executable**
